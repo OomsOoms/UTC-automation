@@ -9,11 +9,9 @@ platform = input("Linux - 1\nWindows - 2\n")
 if str(platform) == "1":
     print("1")
     keys_file_path = f"{os.getcwd()}/keys.json"
-    print(keys_file_path)
+    
 if str(platform) == "2":
     keys_file_path = f"{os.getcwd()}\keys.json"
-    print(keys_file_path)
-#keys_file_path = "E:\\UTC automation\\keys.json"
 
 # user inputs - The ID of the spreadsheet
 spreadsheet_1 = input("url of spreadsheets that it will read from ")
@@ -43,7 +41,7 @@ while True:
                                 range="Form responses 1!c2:o").execute()
     values = result.get('values', [])
 
-    # works out averages - converts to correct format and writes to the spreadsheet 2
+# works out averages - converts to correct format and writes to the spreadsheet 2
 
     entry_number = 0
     write = []
@@ -108,10 +106,10 @@ while True:
 
             if mins == 0:
                 if float(sec) < 10:
-                    average = f"'0{sec:.2f}"
+                    average = f"' {sec:.2f}"
+
                 else:
                     average = f"'{sec:.2f}"
-                
 
             else:
                 if float(sec) < 10:
@@ -135,3 +133,4 @@ while True:
     print("Done!")
 
     time.sleep(10)
+
