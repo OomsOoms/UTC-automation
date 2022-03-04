@@ -4,13 +4,15 @@ from google.oauth2 import service_account
 import os
 
 # finds file path
-try:
-    
+platform = input("Linux - 1\nWindows - 2\n")
+if str(platform) == "1":
+    print("1")
     keys_file_path = f"{os.getcwd()}/keys.json"
     print(keys_file_path)
-except FileNotFoundError:
+if str(platform) == "2":
     keys_file_path = f"{os.getcwd()}\keys.json"
     print(keys_file_path)
+#keys_file_path = "E:\\UTC automation\\keys.json"
 
 # user inputs - The ID of the spreadsheet
 spreadsheet_1 = input("url of spreadsheets that it will read from ")
@@ -39,11 +41,6 @@ result = sheet.values().get(spreadsheetId=spreadsheet_1,
                             range="Form responses 1!c2:o").execute()
 values = result.get('values', [])
 
-# clears the second spreadsheet
-clear_range = '3x3!a3:i'
-body = {}
-resultClear = sheet.values( ).clear( spreadsheetId=spreadsheet_2, range=clear_range,
-                                                       body=body ).execute( )
 # works out averages - converts to correct format and writes to the spreadsheet 2
 
 entry_number = 0
