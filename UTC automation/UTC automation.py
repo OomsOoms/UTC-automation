@@ -12,7 +12,6 @@ if str(platform) == "1":
 if str(platform) == "2":
     keys_file_path = f"{os.getcwd()}\keys.json"
     print(keys_file_path)
-#keys_file_path = "E:\\UTC automation\\keys.json"
 
 # user inputs - The ID of the spreadsheet
 spreadsheet_1 = input("url of spreadsheets that it will read from ")
