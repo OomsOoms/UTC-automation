@@ -36,11 +36,11 @@ service = build('sheets', 'v4', credentials=credentials)
 # Call the Sheets API
 sheet = service.spreadsheets()
 result = sheet.values().get(spreadsheetId=spreadsheet_1,
-                            range="Form responses 1!c2:o100").execute()
+                            range="Form responses 1!c2:o").execute()
 values = result.get('values', [])
 
 # clears the second spreadsheet
-clear_range = '3x3!a3:i100'
+clear_range = '3x3!a3:i'
 body = {}
 resultClear = sheet.values( ).clear( spreadsheetId=spreadsheet_2, range=clear_range,
                                                        body=body ).execute( )
