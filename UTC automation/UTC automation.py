@@ -23,8 +23,6 @@ spreadsheet_2 = spreadsheet_2.split("/")[5]
 print(f"the id is {spreadsheet_2} for the spreadsheet you are writing to")
 input("YOU ARE ABOUT TO OVERWRITE THE SECOND SHPREADSHEET YOU HAVE ENTERED. PRESS ENTER TO CONTUINUE")
 
-results_url = "1LsdbWToJdVjKo-_GKOczBzc403_oG68vwtWppafy6Ps"
-
 # location of .json file + cred stuff
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = None
